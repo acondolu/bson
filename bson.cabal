@@ -48,7 +48,8 @@ Library
   Default-Extensions: BangPatterns, CPP
 
   Exposed-modules:  Data.Bson,
-                    Data.Bson.Binary
+                    Data.Bson.Binary,
+                    Data.Bson.Size
 
 Source-repository head
     Type:     git
@@ -59,6 +60,7 @@ Test-suite bson-tests
   Hs-source-dirs:   tests
   Main-is:          Tests.hs
   Other-modules:    Data.Bson.Binary.Tests
+                    Data.Bson.Size.Tests
                     Data.Bson.Tests
   Ghc-options:      -Wall -fno-warn-orphans
 
@@ -72,6 +74,7 @@ Test-suite bson-tests
                     , base
                     , time
                     , bytestring
+                    , binary >= 0.5 && < 0.9
                     , text
 
   Default-Language: Haskell2010
